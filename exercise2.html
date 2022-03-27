@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="mydiv"></div>
+</body>
+<script>
+    function changebackgroundcolor(color){
+        document.getElementById('mydiv').style.background=color;
+    }
+    window.addEventListener("load",function(){ changebackgroundcolor('blue') });
+    var i=1;
+    var colors=['blue','red','green'];
+    document.getElementById("mydiv").addEventListener("click", function(){
+    changebackgroundcolor(colors[i]);
+    i++;
+    if(i==3)
+    i=0;
+});
+</script>
+</html>
